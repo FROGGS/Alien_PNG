@@ -15,7 +15,7 @@ Alien::PNG - building, finding and using PNG binaries
 
 =head1 VERSION
 
-Version 0.1_0
+Version 0.1
 
 =cut
 
@@ -57,7 +57,7 @@ and/or related libraries like this:
 
 =head1 DESCRIPTION
 
-Please see L<Alien> for the manifesto of the Alien namespace.
+Please see L<Alien> for the manifest of the Alien namespace.
 
 In short C<Alien::PNG> can be used to detect and get
 configuration settings from an installed PNG and related libraries.
@@ -145,13 +145,13 @@ Please post issues and bugs at L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Alien-
 
 =head1 AUTHOR
 
-    Kartik Thakore
-    CPAN ID: KTHAKORE
-    Thakore.Kartik@gmail.com
-    http://yapgh.blogspot.com
+    Tobias Leich
+    CPAN ID: FROGGS
+    FROGGS@cpan.org
 
 =head1 ACKNOWLEDGEMENTS
 
+    This module is based on Alien::SDL, so in fact the credits has to be given to these guys.
     kmx - complete redesign between versions 0.7.x and 0.8.x
 
 =head1 COPYRIGHT
