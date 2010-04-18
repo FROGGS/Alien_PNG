@@ -53,7 +53,7 @@ my $build = $package->new(
   meta_merge => {
     resources  => {
       bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Alien-PNG',
-      repository => 'http://github.com/kthakore/Alien_PNG'
+      repository => 'http://github.com/FROGGS/Alien_PNG'
     }
   },
   create_readme => 1,
