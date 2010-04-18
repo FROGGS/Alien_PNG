@@ -318,8 +318,6 @@ sub check_sha1sum {
   binmode($fh);
   $sha1->addfile($fh);
   close($fh);
-  print $sha1->hexdigest . " eq $sha1sum\n";
-  return 1;
   return ($sha1->hexdigest eq $sha1sum) ? 1 : 0
 }
 
