@@ -19,7 +19,7 @@ Version 0.1
 
 =cut
 
-our $VERSION = '0.1_0';
+our $VERSION = '0.1';
 $VERSION = eval $VERSION;
 
 =head1 SYNOPSIS
