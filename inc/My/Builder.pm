@@ -203,12 +203,22 @@ sub set_config_data {
   my $bp = $self->config_data('build_prefix') || $prefix;
   my $devnull = File::Spec->devnull();
   my $script = rel2abs("$prefix/bin/libpng-config");
-  foreach my $p (qw(version prefix libs cflags)) {
+  foreach my $p (qw(version prefix L_opts libs I_opts cflags)) {
     my $o=`$script --$p 2>$devnull`;
     if ($o) {
-      $o =~ s/[\r\n]*$//;
+      $o =~ s/[\r\n]*//;
       $o =~ s/\Q$prefix\E/\@PrEfIx\@/g;
       $cfg->{$p} = $o;
+      
+      if($p eq 'libs') {
+        $cfg->{$p} = $cfg->{L_opts} . ' ' . $cfg->{$p};
+        delete $cfg->{L_opts};
+      }
+      
+      if($p eq 'cflags') {
+        $cfg->{$p} = $cfg->{I_opts} . ' ' . $cfg->{$p};
+        delete $cfg->{I_opts};
+      }
     }
   }
 
