@@ -131,8 +131,7 @@ sub find_PNG_dir {
   my ($v, $d, $f) = splitpath($found);
   my @pp = reverse splitdir($d);
   shift(@pp) if(defined($pp[0]) && $pp[0] eq '');
-  shift(@pp) if(defined($pp[0]) && $pp[0] eq 'libpng');
-  shift(@pp) if(defined($pp[0]) && $pp[0] eq 'libpng12');
+  shift(@pp) if(defined($pp[0]) && $pp[0] =~ /libpng\d+/);
   if(defined($pp[0]) && $pp[0] eq 'include') {
     shift(@pp);
     @pp = reverse @pp;
