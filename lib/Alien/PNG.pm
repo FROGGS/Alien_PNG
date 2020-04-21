@@ -15,11 +15,11 @@ Alien::PNG - building, finding and using PNG binaries
 
 =head1 VERSION
 
-Version 0.3_01
+Version 0.4
 
 =cut
 
-our $VERSION = '0.3_01';
+our $VERSION = '0.4';
 $VERSION = eval $VERSION;
 
 =head1 SYNOPSIS
